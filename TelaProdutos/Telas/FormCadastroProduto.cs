@@ -24,7 +24,7 @@ namespace TelaProdutos
 
                 if (!string.IsNullOrWhiteSpace(txtFDescrição.Text))
                 {
-                    query = query.Where(item => item.Descrição.Contains(txtDescrição.Text));
+                    query = query.Where(item => item.Descrição.Contains(txtFDescrição.Text));
                 }
 
                 if (!string.IsNullOrWhiteSpace(txtFModelo.Text))
@@ -84,6 +84,8 @@ namespace TelaProdutos
 
                 _produtos = AplicarFiltro(filtro);
                 tabEstoqueBindingSource.DataSource = _produtos;
+
+                desabilitaCampos();
 
             }
             catch (Exception ex)
@@ -150,6 +152,7 @@ namespace TelaProdutos
 
                             txtCodProd.Text = nextId.ToString();
                         }
+
                         TabEstoque novoItem = new TabEstoque
                         {
                             IdItem = txtCodProd.Text,
@@ -217,6 +220,8 @@ namespace TelaProdutos
                 txtFLocalizacao2.Text = string.Empty;
                 txtFCodFabrica.Text = string.Empty;
                 txtFCodSubs.Text = string.Empty;
+
+                habilitaCampos();
             }
             catch (Exception ex)
             {
@@ -319,6 +324,29 @@ namespace TelaProdutos
             {
                 return 1;
             }
+        }
+
+        private void desabilitaCampos()
+        {
+            txtFCodProd.ReadOnly = true;
+            txtFDescrição.ReadOnly = true;
+            txtFModelo.ReadOnly = true;
+            txtFLocalizacao.ReadOnly = true;
+            txtFLocalizacao2.ReadOnly = true;
+            txtFCodFabrica.ReadOnly = true;
+            txtFCodSubs.ReadOnly = true;
+            btnFiltrar.Enabled = false;
+        }
+        private void habilitaCampos()
+        {
+            txtFCodProd.ReadOnly = false;
+            txtFDescrição.ReadOnly = false;
+            txtFModelo.ReadOnly = false;
+            txtFLocalizacao.ReadOnly = false;
+            txtFLocalizacao2.ReadOnly = false;
+            txtFCodFabrica.ReadOnly = false;
+            txtFCodSubs.ReadOnly = false;
+            btnFiltrar.Enabled = true;
         }
 
     }
