@@ -120,10 +120,11 @@ namespace TelaProdutos
             try
             {
                 string idItem = txtCodProd.Text;
+                string descricaoItem = txtDescrição.Text;
 
                 using (OuroContext ouro = new OuroContext())
                 {
-                    var tabEstoque = ouro.TabEstoques.FirstOrDefault(Item => Item.IdItem == txtCodProd.Text);
+                    var tabEstoque = ouro.TabEstoques.FirstOrDefault(item => item.IdItem == txtCodProd.Text);
 
                     if (tabEstoque != null)
                     {
@@ -142,6 +143,10 @@ namespace TelaProdutos
                         ouro.SaveChanges();
 
                         MessageBox.Show("Salvo com sucesso!");
+                    }
+                    else
+                    {
+                        var existingItem = ouro.TabEstoques.FirstOrDefault(item => item.Descrição == descricaoItem);
 
                     }
                     else
@@ -152,6 +157,7 @@ namespace TelaProdutos
 
                             txtCodProd.Text = nextId.ToString();
                         }
+
 
                         TabEstoque novoItem = new TabEstoque
                         {
@@ -169,20 +175,24 @@ namespace TelaProdutos
 
                         };
 
+
                         ouro.TabEstoques.Add(novoItem);
                         ouro.SaveChanges();
 
                         MessageBox.Show("Produto cadastrado com sucesso!");
                     }
+                    }
                     _produtos = ouro.TabEstoques.ToList();
                     tabEstoqueBindingSource.DataSource = _produtos;
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -337,6 +347,7 @@ namespace TelaProdutos
             txtFCodSubs.ReadOnly = true;
             btnFiltrar.Enabled = false;
         }
+
         private void habilitaCampos()
         {
             txtFCodProd.ReadOnly = false;
