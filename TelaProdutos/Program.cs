@@ -1,3 +1,5 @@
+using TelaProdutos.Telas;
+
 namespace TelaProdutos
 {
     internal static class Program
@@ -9,7 +11,7 @@ namespace TelaProdutos
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormCadastroProduto());
+            Application.Run(new FormPrincipal());
         }
     }
 }

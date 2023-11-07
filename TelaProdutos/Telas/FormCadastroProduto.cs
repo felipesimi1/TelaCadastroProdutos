@@ -120,7 +120,7 @@ namespace TelaProdutos
             try
             {
                 string idItem = txtCodProd.Text;
-                string descricaoItem = txtDescriÃ§Ã£o.Text;
+                string descricaoItem = txtDescrição.Text;
 
                 using (OuroContext ouro = new OuroContext())
                 {
@@ -146,41 +146,44 @@ namespace TelaProdutos
                     }
                     else
                     {
-                        var existingItem = ouro.TabEstoques.FirstOrDefault(item => item.DescriÃ§Ã£o == descricaoItem);
+                        var existingItem = ouro.TabEstoques.FirstOrDefault(item => item.Descrição == descricaoItem);
 
-                    }
-                    else
-                    {
-                        if (string.IsNullOrEmpty(txtCodProd.Text))
+                        if (existingItem != null)
                         {
-                            int nextId = igualarIdItemComPk(ouro);
-
-                            txtCodProd.Text = nextId.ToString();
+                            MessageBox.Show("A descrição já existe. Tente Novamente!");
                         }
-
-
-                        TabEstoque novoItem = new TabEstoque
+                        else
                         {
-                            IdItem = txtCodProd.Text,
-                            Descrição = txtDescrição.Text,
-                            Grupo = cbIdGrupo.Text,
-                            Referência = cbIdReferência.Text,
-                            Modelo = txtModelo.Text,
-                            Localização = txtLocalizacao.Text,
-                            Localização2 = txtLocalizacao2.Text,
-                            CódigoFábrica = txtCodFabrica.Text,
-                            CódigoVelho = txtCodSubs.Text,
-                            BitProdutoObsoleto = cbProdObs.Checked,
-                            BitProdutoEmFalta = cbProdFalta.Checked
+                            if (string.IsNullOrEmpty(txtCodProd.Text))
+                            {
+                                int nextId = igualarIdItemComPk(ouro);
 
-                        };
+                                txtCodProd.Text = nextId.ToString();
+                            }
 
 
-                        ouro.TabEstoques.Add(novoItem);
-                        ouro.SaveChanges();
+                            TabEstoque novoItem = new TabEstoque
+                            {
+                                IdItem = txtCodProd.Text,
+                                Descrição = txtDescrição.Text,
+                                Grupo = cbIdGrupo.Text,
+                                Referência = cbIdReferência.Text,
+                                Modelo = txtModelo.Text,
+                                Localização = txtLocalizacao.Text,
+                                Localização2 = txtLocalizacao2.Text,
+                                CódigoFábrica = txtCodFabrica.Text,
+                                CódigoVelho = txtCodSubs.Text,
+                                BitProdutoObsoleto = cbProdObs.Checked,
+                                BitProdutoEmFalta = cbProdFalta.Checked
 
-                        MessageBox.Show("Produto cadastrado com sucesso!");
-                    }
+                            };
+
+
+                            ouro.TabEstoques.Add(novoItem);
+                            ouro.SaveChanges();
+
+                            MessageBox.Show("Produto cadastrado com sucesso!");
+                        }
                     }
                     _produtos = ouro.TabEstoques.ToList();
                     tabEstoqueBindingSource.DataSource = _produtos;
@@ -192,6 +195,7 @@ namespace TelaProdutos
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -286,13 +290,14 @@ namespace TelaProdutos
             cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
         }
 
-        private void cbIdGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbIdGrupo_SelectedValueChanged(object sender, EventArgs e)
         {
             var IdGrupo = cbIdGrupo.Text;
 
             cbIdReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
             cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
         }
+
 
         private void carregaCategoria()
         {
@@ -359,6 +364,39 @@ namespace TelaProdutos
             btnFiltrar.Enabled = true;
         }
 
+        private void cbReferência_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbReferência.SelectedItem != null)
+            {
+                string Referência = cbReferência.SelectedValue.ToString();
+
+                foreach (var item in cbReferência.Items)
+                {
+                    if (item is TabEstoqueReferêncium Idreferencia && Idreferencia.Referência == Referência)
+                    {
+                        cbIdReferência.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void cbIdReferência_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbIdReferência.SelectedItem != null)
+            {
+                string IdReferência = cbIdReferência.SelectedValue.ToString();
+
+                foreach (var item in cbIdReferência.Items)
+                {
+                    if (item is TabEstoqueReferêncium referencia && referencia.IdReferência == IdReferência)
+                    {
+                        cbReferência.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
 

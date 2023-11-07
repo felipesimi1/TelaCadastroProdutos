@@ -448,6 +448,7 @@
             cbReferência.Name = "cbReferência";
             cbReferência.Size = new Size(288, 23);
             cbReferência.TabIndex = 27;
+            cbReferência.SelectedValueChanged += cbReferência_SelectedValueChanged;
             // 
             // txtDataCadastro
             // 
@@ -826,6 +827,7 @@
             cbIdReferência.Name = "cbIdReferência";
             cbIdReferência.Size = new Size(68, 23);
             cbIdReferência.TabIndex = 3;
+            cbIdReferência.SelectedValueChanged += cbIdReferência_SelectedValueChanged;
             // 
             // cbGrupo
             // 
@@ -855,7 +857,7 @@
             cbIdGrupo.Name = "cbIdGrupo";
             cbIdGrupo.Size = new Size(68, 23);
             cbIdGrupo.TabIndex = 0;
-            cbIdGrupo.SelectedIndexChanged += cbIdGrupo_SelectedIndexChanged;
+            cbIdGrupo.SelectedValueChanged += cbIdGrupo_SelectedValueChanged;
             // 
             // groupBox1
             // 
@@ -1018,7 +1020,7 @@
             Controls.Add(btnSalvar);
             Controls.Add(btnNovo);
             Controls.Add(btnExcluir);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCadastroProduto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Produto";
