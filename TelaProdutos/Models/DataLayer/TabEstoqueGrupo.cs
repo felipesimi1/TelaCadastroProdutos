@@ -13,5 +13,4 @@ public class TabEstoqueGrupo
 
     [StringLength(50)]
     public string? Grupo { get; set; }
-
 }

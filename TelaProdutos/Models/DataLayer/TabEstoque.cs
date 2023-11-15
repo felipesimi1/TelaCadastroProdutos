@@ -1,23 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace TelaProdutos.Models.DataLayer;
 
-
 [Table("Tab_Estoque")]
-public class TabEstoque
+public partial class TabEstoque
 {
-    [StringLength(3)]
+    [StringLength(6)]
     public string? Grupo { get; set; }
 
-    [StringLength(5)]
+    [StringLength(10)]
     public string? Referência { get; set; }
 
-    [StringLength(50)]
+    [StringLength(100)]
     public string? Modelo { get; set; }
 
-    [StringLength(20)]
+    [StringLength(40)]
     public string? CódigoFábrica { get; set; }
 
     [Column(TypeName = "money")]
@@ -26,19 +27,22 @@ public class TabEstoque
     [Column(TypeName = "money")]
     public decimal? Volume { get; set; }
 
-    [StringLength(20)]
+    [StringLength(40)]
     public string? CódigoVelho { get; set; }
 
-    [StringLength(20)]
+    [StringLength(40)]
     public string? Localização { get; set; }
+
+    [StringLength(40)]
+    public string? Localização2 { get; set; }
 
     [Column(TypeName = "datetime")]
     public DateTime? DataCadastro { get; set; }
 
-    [StringLength(20)]
-    public string IdItem { get; set; }
+    [StringLength(14)]
+    public string? IdItem { get; set; }
 
-    [StringLength(20)]
+    [StringLength(40)]
     public string? IdUsuário { get; set; }
 
     [Column(TypeName = "money")]
@@ -47,10 +51,7 @@ public class TabEstoque
     [Column(TypeName = "money")]
     public decimal? Altura { get; set; }
 
-    [StringLength(20)]
-    public string? Localização2 { get; set; }
-
-    [StringLength(200)]
+    [StringLength(400)]
     public string? Descrição { get; set; }
 
     [Column("cur_Comprimento", TypeName = "money")]
@@ -70,8 +71,8 @@ public class TabEstoque
     public decimal? CurUmidade { get; set; }
 
     [Column("bit_ProdutoObsoleto")]
-    public bool BitProdutoObsoleto { get; set; }
+    public bool? BitProdutoObsoleto { get; set; }
 
     [Column("bit_ProdutoEmFalta")]
-    public bool BitProdutoEmFalta { get; set; }
+    public bool? BitProdutoEmFalta { get; set; }
 }

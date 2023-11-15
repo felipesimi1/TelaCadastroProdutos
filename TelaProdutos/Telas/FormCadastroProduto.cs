@@ -142,6 +142,7 @@ namespace TelaProdutos
                         //tabEstoqueBindingSource.EndEdit();
                         ouro.SaveChanges();
 
+
                         MessageBox.Show("Salvo com sucesso!");
                     }
                     else
@@ -298,31 +299,35 @@ namespace TelaProdutos
             cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
         }
 
-
         private void carregaCategoria()
         {
-            using (OuroContext context = new OuroContext())
+            try
             {
-                _grupos = context.TabEstoqueGrupo.ToList();
+                using (OuroContext context = new OuroContext())
+                {
+                    _grupos = context.TabEstoqueGrupo.ToList();
+                    _subgrupos = context.TabEstoqueReferência.ToList();
 
-                cbIdGrupo.DataSource = _grupos;
-                cbGrupo.DataSource = _grupos;
+                    cbIdGrupo.DataSource = _grupos;
+                    cbGrupo.DataSource = _grupos;
 
-                cbIdGrupo.DisplayMember = "IdGrupo";
-                cbIdGrupo.ValueMember = "IdGrupo";
-                cbGrupo.DisplayMember = "Grupo";
-                cbGrupo.ValueMember = "Grupo";
+                    cbIdGrupo.DisplayMember = "IdGrupo";
+                    cbIdGrupo.ValueMember = "IdGrupo";
+                    cbGrupo.DisplayMember = "Grupo";
+                    cbGrupo.ValueMember = "Grupo";
 
-                _subgrupos = context.TabEstoqueReferência.ToList();
+                    cbIdReferência.DataSource = _subgrupos;
+                    cbReferência.DataSource = _subgrupos;
 
-                cbIdReferência.DataSource = _subgrupos;
-                cbReferência.DataSource = _subgrupos;
-
-                cbIdReferência.DisplayMember = "IdReferência";
-                cbIdReferência.ValueMember = "IdReferência";
-                cbReferência.DisplayMember = "Referência";
-                cbReferência.ValueMember = "Referência";
-
+                    cbIdReferência.DisplayMember = "IdReferência";
+                    cbIdReferência.ValueMember = "IdReferência";
+                    cbReferência.DisplayMember = "Referência";
+                    cbReferência.ValueMember = "Referência";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar categorias: " + ex.Message);
             }
         }
 
@@ -399,4 +404,3 @@ namespace TelaProdutos
         }
     }
 }
-

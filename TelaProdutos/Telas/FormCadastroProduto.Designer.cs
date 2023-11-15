@@ -56,8 +56,8 @@
             tabPage2 = new TabPage();
             groupBox2 = new GroupBox();
             cbReferência = new ComboBox();
-            txtDataCadastro = new TextBox();
             tabEstoqueBindingSource = new BindingSource(components);
+            txtDataCadastro = new TextBox();
             txtUsuario = new TextBox();
             label20 = new Label();
             label19 = new Label();
@@ -148,7 +148,7 @@
             btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
             btnExcluir.ImageIndex = 3;
             btnExcluir.ImageList = imageList1;
-            btnExcluir.Location = new Point(450, 725);
+            btnExcluir.Location = new Point(898, 547);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Padding = new Padding(4, 0, 2, 0);
             btnExcluir.Size = new Size(96, 37);
@@ -164,7 +164,7 @@
             btnNovo.ImageAlign = ContentAlignment.MiddleLeft;
             btnNovo.ImageIndex = 1;
             btnNovo.ImageList = imageList1;
-            btnNovo.Location = new Point(348, 725);
+            btnNovo.Location = new Point(796, 547);
             btnNovo.Name = "btnNovo";
             btnNovo.Padding = new Padding(4, 0, 2, 0);
             btnNovo.Size = new Size(96, 37);
@@ -180,7 +180,7 @@
             btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
             btnSalvar.ImageIndex = 0;
             btnSalvar.ImageList = imageList1;
-            btnSalvar.Location = new Point(246, 725);
+            btnSalvar.Location = new Point(694, 547);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(4, 0, 2, 0);
             btnSalvar.Size = new Size(96, 37);
@@ -198,21 +198,21 @@
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(655, 719);
+            tabControl1.Size = new Size(1103, 541);
             tabControl1.TabIndex = 8;
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = Color.White;
             tabPage1.Controls.Add(btnFiltrar);
             tabPage1.Controls.Add(groupBox5);
             tabPage1.Controls.Add(groupBox6);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(647, 691);
+            tabPage1.Size = new Size(1095, 513);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Filtro";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnFiltrar
             // 
@@ -220,7 +220,7 @@
             btnFiltrar.ImageAlign = ContentAlignment.MiddleLeft;
             btnFiltrar.ImageIndex = 7;
             btnFiltrar.ImageList = imageList1;
-            btnFiltrar.Location = new Point(477, 272);
+            btnFiltrar.Location = new Point(933, 209);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Padding = new Padding(4, 0, 2, 0);
             btnFiltrar.Size = new Size(96, 37);
@@ -244,7 +244,7 @@
             groupBox5.Controls.Add(label25);
             groupBox5.Location = new Point(55, 110);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(518, 156);
+            groupBox5.Size = new Size(974, 93);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             // 
@@ -252,7 +252,7 @@
             // 
             txtFCodSubs.BorderStyle = BorderStyle.FixedSingle;
             txtFCodSubs.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFCodSubs.Location = new Point(137, 113);
+            txtFCodSubs.Location = new Point(135, 57);
             txtFCodSubs.Name = "txtFCodSubs";
             txtFCodSubs.Size = new Size(114, 22);
             txtFCodSubs.TabIndex = 15;
@@ -261,7 +261,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(64, 118);
+            label21.Location = new Point(62, 62);
             label21.Name = "label21";
             label21.Size = new Size(67, 17);
             label21.TabIndex = 14;
@@ -271,7 +271,7 @@
             // 
             txtFCodFabrica.BorderStyle = BorderStyle.FixedSingle;
             txtFCodFabrica.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFCodFabrica.Location = new Point(137, 85);
+            txtFCodFabrica.Location = new Point(348, 57);
             txtFCodFabrica.Name = "txtFCodFabrica";
             txtFCodFabrica.Size = new Size(114, 22);
             txtFCodFabrica.TabIndex = 13;
@@ -280,7 +280,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(50, 90);
+            label22.Location = new Point(261, 62);
             label22.Name = "label22";
             label22.Size = new Size(81, 17);
             label22.TabIndex = 12;
@@ -290,7 +290,7 @@
             // 
             txtFLocalizacao2.BorderStyle = BorderStyle.FixedSingle;
             txtFLocalizacao2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFLocalizacao2.Location = new Point(350, 57);
+            txtFLocalizacao2.Location = new Point(776, 29);
             txtFLocalizacao2.Name = "txtFLocalizacao2";
             txtFLocalizacao2.Size = new Size(112, 22);
             txtFLocalizacao2.TabIndex = 11;
@@ -299,7 +299,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(255, 62);
+            label23.Location = new Point(681, 34);
             label23.Name = "label23";
             label23.Size = new Size(89, 17);
             label23.TabIndex = 10;
@@ -309,7 +309,7 @@
             // 
             txtFLocalizacao.BorderStyle = BorderStyle.FixedSingle;
             txtFLocalizacao.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFLocalizacao.Location = new Point(137, 57);
+            txtFLocalizacao.Location = new Point(563, 29);
             txtFLocalizacao.Name = "txtFLocalizacao";
             txtFLocalizacao.Size = new Size(114, 22);
             txtFLocalizacao.TabIndex = 9;
@@ -318,7 +318,7 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(53, 62);
+            label24.Location = new Point(479, 34);
             label24.Name = "label24";
             label24.Size = new Size(78, 17);
             label24.TabIndex = 8;
@@ -351,7 +351,7 @@
             groupBox6.Controls.Add(label29);
             groupBox6.Location = new Point(55, 30);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(518, 74);
+            groupBox6.Size = new Size(974, 74);
             groupBox6.TabIndex = 6;
             groupBox6.TabStop = false;
             // 
@@ -396,16 +396,16 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.White;
             tabPage2.Controls.Add(groupBox2);
             tabPage2.Controls.Add(groupBox1);
             tabPage2.Controls.Add(lista);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(647, 691);
+            tabPage2.Size = new Size(1095, 513);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Dados";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -437,39 +437,40 @@
             groupBox2.Controls.Add(cbIdGrupo);
             groupBox2.Location = new Point(39, 249);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(580, 423);
+            groupBox2.Size = new Size(1018, 247);
             groupBox2.TabIndex = 10;
             groupBox2.TabStop = false;
             // 
             // cbReferência
             // 
+            cbReferência.DataBindings.Add(new Binding("Text", tabEstoqueReferênciumBindingSource, "Referência", true));
             cbReferência.FormattingEnabled = true;
-            cbReferência.Location = new Point(213, 51);
+            cbReferência.Location = new Point(178, 54);
             cbReferência.Name = "cbReferência";
             cbReferência.Size = new Size(288, 23);
             cbReferência.TabIndex = 27;
             cbReferência.SelectedValueChanged += cbReferência_SelectedValueChanged;
+            // 
+            // tabEstoqueBindingSource
+            // 
+            tabEstoqueBindingSource.DataSource = typeof(Models.DataLayer.TabEstoque);
             // 
             // txtDataCadastro
             // 
             txtDataCadastro.BackColor = Color.White;
             txtDataCadastro.BorderStyle = BorderStyle.None;
             txtDataCadastro.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "DataCadastro", true));
-            txtDataCadastro.Location = new Point(149, 401);
+            txtDataCadastro.Location = new Point(138, 226);
             txtDataCadastro.Name = "txtDataCadastro";
             txtDataCadastro.Size = new Size(100, 16);
             txtDataCadastro.TabIndex = 26;
-            // 
-            // tabEstoqueBindingSource
-            // 
-            tabEstoqueBindingSource.DataSource = typeof(Models.DataLayer.TabEstoque);
             // 
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.White;
             txtUsuario.BorderStyle = BorderStyle.None;
             txtUsuario.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "IdUsuário", true));
-            txtUsuario.Location = new Point(391, 399);
+            txtUsuario.Location = new Point(298, 226);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(100, 16);
             txtUsuario.TabIndex = 25;
@@ -477,7 +478,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(342, 400);
+            label20.Location = new Point(249, 227);
             label20.Name = "label20";
             label20.Size = new Size(50, 15);
             label20.TabIndex = 23;
@@ -486,7 +487,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(68, 400);
+            label19.Location = new Point(57, 226);
             label19.Name = "label19";
             label19.Size = new Size(75, 15);
             label19.TabIndex = 22;
@@ -496,9 +497,9 @@
             // 
             groupBox4.Controls.Add(cbProdFalta);
             groupBox4.Controls.Add(cbProdObs);
-            groupBox4.Location = new Point(17, 339);
+            groupBox4.Location = new Point(486, 141);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(526, 44);
+            groupBox4.Size = new Size(511, 44);
             groupBox4.TabIndex = 21;
             groupBox4.TabStop = false;
             // 
@@ -542,9 +543,9 @@
             groupBox3.Controls.Add(label14);
             groupBox3.Controls.Add(txtAltura);
             groupBox3.Controls.Add(label13);
-            groupBox3.Location = new Point(17, 220);
+            groupBox3.Location = new Point(486, 22);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(526, 113);
+            groupBox3.Size = new Size(511, 113);
             groupBox3.TabIndex = 20;
             groupBox3.TabStop = false;
             groupBox3.Text = "Cubagem";
@@ -674,7 +675,7 @@
             txtVolume.BorderStyle = BorderStyle.FixedSingle;
             txtVolume.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Volume", true));
             txtVolume.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtVolume.Location = new Point(389, 192);
+            txtVolume.Location = new Point(354, 167);
             txtVolume.Name = "txtVolume";
             txtVolume.Size = new Size(114, 22);
             txtVolume.TabIndex = 19;
@@ -683,7 +684,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(329, 197);
+            label12.Location = new Point(294, 172);
             label12.Name = "label12";
             label12.Size = new Size(54, 17);
             label12.TabIndex = 18;
@@ -694,7 +695,7 @@
             txtPeso.BorderStyle = BorderStyle.FixedSingle;
             txtPeso.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Peso", true));
             txtPeso.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPeso.Location = new Point(138, 192);
+            txtPeso.Location = new Point(103, 167);
             txtPeso.Name = "txtPeso";
             txtPeso.Size = new Size(135, 22);
             txtPeso.TabIndex = 17;
@@ -703,7 +704,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(93, 197);
+            label11.Location = new Point(58, 172);
             label11.Name = "label11";
             label11.Size = new Size(39, 17);
             label11.TabIndex = 16;
@@ -714,7 +715,7 @@
             txtCodSubs.BorderStyle = BorderStyle.FixedSingle;
             txtCodSubs.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "CódigoVelho", true));
             txtCodSubs.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCodSubs.Location = new Point(138, 164);
+            txtCodSubs.Location = new Point(333, 139);
             txtCodSubs.Name = "txtCodSubs";
             txtCodSubs.Size = new Size(135, 22);
             txtCodSubs.TabIndex = 15;
@@ -723,7 +724,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(65, 169);
+            label10.Location = new Point(260, 144);
             label10.Name = "label10";
             label10.Size = new Size(67, 17);
             label10.TabIndex = 14;
@@ -734,7 +735,7 @@
             txtCodFabrica.BorderStyle = BorderStyle.FixedSingle;
             txtCodFabrica.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "CódigoFábrica", true));
             txtCodFabrica.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCodFabrica.Location = new Point(138, 136);
+            txtCodFabrica.Location = new Point(103, 139);
             txtCodFabrica.Name = "txtCodFabrica";
             txtCodFabrica.Size = new Size(135, 22);
             txtCodFabrica.TabIndex = 13;
@@ -743,7 +744,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(51, 141);
+            label9.Location = new Point(16, 144);
             label9.Name = "label9";
             label9.Size = new Size(81, 17);
             label9.TabIndex = 12;
@@ -754,7 +755,7 @@
             txtLocalizacao2.BorderStyle = BorderStyle.FixedSingle;
             txtLocalizacao2.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Localização2", true));
             txtLocalizacao2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLocalizacao2.Location = new Point(389, 108);
+            txtLocalizacao2.Location = new Point(354, 111);
             txtLocalizacao2.Name = "txtLocalizacao2";
             txtLocalizacao2.Size = new Size(112, 22);
             txtLocalizacao2.TabIndex = 11;
@@ -763,7 +764,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(294, 113);
+            label8.Location = new Point(259, 116);
             label8.Name = "label8";
             label8.Size = new Size(89, 17);
             label8.TabIndex = 10;
@@ -774,7 +775,7 @@
             txtLocalizacao.BorderStyle = BorderStyle.FixedSingle;
             txtLocalizacao.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Localização", true));
             txtLocalizacao.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLocalizacao.Location = new Point(138, 108);
+            txtLocalizacao.Location = new Point(103, 111);
             txtLocalizacao.Name = "txtLocalizacao";
             txtLocalizacao.Size = new Size(135, 22);
             txtLocalizacao.TabIndex = 9;
@@ -783,7 +784,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(54, 113);
+            label7.Location = new Point(19, 116);
             label7.Name = "label7";
             label7.Size = new Size(78, 17);
             label7.TabIndex = 8;
@@ -794,7 +795,7 @@
             txtModelo.BorderStyle = BorderStyle.FixedSingle;
             txtModelo.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Modelo", true));
             txtModelo.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtModelo.Location = new Point(138, 80);
+            txtModelo.Location = new Point(103, 83);
             txtModelo.Name = "txtModelo";
             txtModelo.Size = new Size(363, 22);
             txtModelo.TabIndex = 7;
@@ -803,7 +804,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(75, 85);
+            label6.Location = new Point(40, 88);
             label6.Name = "label6";
             label6.Size = new Size(57, 17);
             label6.TabIndex = 6;
@@ -813,7 +814,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(58, 57);
+            label5.Location = new Point(23, 60);
             label5.Name = "label5";
             label5.Size = new Size(74, 17);
             label5.TabIndex = 4;
@@ -823,7 +824,7 @@
             // 
             cbIdReferência.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Referência", true));
             cbIdReferência.FormattingEnabled = true;
-            cbIdReferência.Location = new Point(138, 51);
+            cbIdReferência.Location = new Point(103, 54);
             cbIdReferência.Name = "cbIdReferência";
             cbIdReferência.Size = new Size(68, 23);
             cbIdReferência.TabIndex = 3;
@@ -832,7 +833,7 @@
             // cbGrupo
             // 
             cbGrupo.FormattingEnabled = true;
-            cbGrupo.Location = new Point(213, 22);
+            cbGrupo.Location = new Point(178, 25);
             cbGrupo.Name = "cbGrupo";
             cbGrupo.Size = new Size(288, 23);
             cbGrupo.TabIndex = 2;
@@ -842,7 +843,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(84, 28);
+            label4.Location = new Point(49, 31);
             label4.Name = "label4";
             label4.Size = new Size(48, 17);
             label4.TabIndex = 1;
@@ -853,7 +854,7 @@
             cbIdGrupo.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Grupo", true));
             cbIdGrupo.FlatStyle = FlatStyle.System;
             cbIdGrupo.FormattingEnabled = true;
-            cbIdGrupo.Location = new Point(138, 22);
+            cbIdGrupo.Location = new Point(103, 25);
             cbIdGrupo.Name = "cbIdGrupo";
             cbIdGrupo.Size = new Size(68, 23);
             cbIdGrupo.TabIndex = 0;
@@ -869,7 +870,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(39, 169);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(580, 74);
+            groupBox1.Size = new Size(1018, 74);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             // 
@@ -878,17 +879,17 @@
             txtDescrição.BorderStyle = BorderStyle.FixedSingle;
             txtDescrição.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Descrição", true));
             txtDescrição.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDescrição.Location = new Point(335, 14);
+            txtDescrição.Location = new Point(407, 15);
             txtDescrição.Multiline = true;
             txtDescrição.Name = "txtDescrição";
-            txtDescrição.Size = new Size(208, 50);
+            txtDescrição.Size = new Size(431, 50);
             txtDescrição.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(261, 19);
+            label3.Location = new Point(333, 20);
             label3.Name = "label3";
             label3.Size = new Size(68, 17);
             label3.TabIndex = 4;
@@ -900,7 +901,7 @@
             txtCodTab.BorderStyle = BorderStyle.FixedSingle;
             txtCodTab.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "PkIntEstoque", true));
             txtCodTab.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCodTab.Location = new Point(137, 42);
+            txtCodTab.Location = new Point(185, 43);
             txtCodTab.Name = "txtCodTab";
             txtCodTab.ReadOnly = true;
             txtCodTab.RightToLeft = RightToLeft.Yes;
@@ -913,7 +914,7 @@
             txtCodProd.BorderStyle = BorderStyle.FixedSingle;
             txtCodProd.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "IdItem", true));
             txtCodProd.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCodProd.Location = new Point(137, 14);
+            txtCodProd.Location = new Point(185, 15);
             txtCodProd.Name = "txtCodProd";
             txtCodProd.Size = new Size(114, 22);
             txtCodProd.TabIndex = 2;
@@ -922,7 +923,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(16, 47);
+            label2.Location = new Point(64, 48);
             label2.Name = "label2";
             label2.Size = new Size(115, 17);
             label2.TabIndex = 1;
@@ -932,7 +933,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(6, 19);
+            label1.Location = new Point(54, 20);
             label1.Name = "label1";
             label1.Size = new Size(125, 17);
             label1.TabIndex = 0;
@@ -954,7 +955,7 @@
             lista.ReadOnly = true;
             lista.RowHeadersWidth = 25;
             lista.RowTemplate.Height = 25;
-            lista.Size = new Size(641, 150);
+            lista.Size = new Size(1089, 150);
             lista.TabIndex = 8;
             lista.SelectionChanged += lista_SelectionChanged;
             // 
@@ -1000,7 +1001,7 @@
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
             btnCancelar.ImageIndex = 2;
             btnCancelar.ImageList = imageList1;
-            btnCancelar.Location = new Point(552, 725);
+            btnCancelar.Location = new Point(1000, 547);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Padding = new Padding(4, 0, 2, 0);
             btnCancelar.Size = new Size(96, 37);
@@ -1014,7 +1015,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(655, 772);
+            ClientSize = new Size(1103, 597);
             Controls.Add(btnCancelar);
             Controls.Add(tabControl1);
             Controls.Add(btnSalvar);
