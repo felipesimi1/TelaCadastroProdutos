@@ -56,8 +56,9 @@
             tabPage2 = new TabPage();
             groupBox2 = new GroupBox();
             cbReferência = new ComboBox();
-            tabEstoqueBindingSource = new BindingSource(components);
+            tabEstoqueReferênciumBindingSource = new BindingSource(components);
             txtDataCadastro = new TextBox();
+            tabEstoqueBindingSource = new BindingSource(components);
             txtUsuario = new TextBox();
             label20 = new Label();
             label19 = new Label();
@@ -92,11 +93,11 @@
             txtModelo = new TextBox();
             label6 = new Label();
             label5 = new Label();
-            cbIdReferência = new ComboBox();
             cbGrupo = new ComboBox();
             label4 = new Label();
             cbIdGrupo = new ComboBox();
             groupBox1 = new GroupBox();
+            cbIdSubGrupo = new ComboBox();
             txtDescrição = new TextBox();
             label3 = new Label();
             txtCodTab = new TextBox();
@@ -108,7 +109,6 @@
             descriçãoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             grupoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             referênciaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tabEstoqueReferênciumBindingSource = new BindingSource(components);
             tabEstoqueGrupoBindingSource = new BindingSource(components);
             btnCancelar = new Button();
             bindingSource1 = new BindingSource(components);
@@ -118,12 +118,12 @@
             groupBox6.SuspendLayout();
             tabPage2.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tabEstoqueReferênciumBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tabEstoqueBindingSource).BeginInit();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lista).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)tabEstoqueReferênciumBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tabEstoqueGrupoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -409,6 +409,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(cbIdSubGrupo);
             groupBox2.Controls.Add(cbReferência);
             groupBox2.Controls.Add(txtDataCadastro);
             groupBox2.Controls.Add(txtUsuario);
@@ -431,7 +432,6 @@
             groupBox2.Controls.Add(txtModelo);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(cbIdReferência);
             groupBox2.Controls.Add(cbGrupo);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(cbIdGrupo);
@@ -451,9 +451,9 @@
             cbReferência.TabIndex = 27;
             cbReferência.SelectedValueChanged += cbReferência_SelectedValueChanged;
             // 
-            // tabEstoqueBindingSource
+            // tabEstoqueReferênciumBindingSource
             // 
-            tabEstoqueBindingSource.DataSource = typeof(Models.DataLayer.TabEstoque);
+            tabEstoqueReferênciumBindingSource.DataSource = typeof(Models.DataLayer.TabEstoqueReferêncium);
             // 
             // txtDataCadastro
             // 
@@ -464,6 +464,10 @@
             txtDataCadastro.Name = "txtDataCadastro";
             txtDataCadastro.Size = new Size(100, 16);
             txtDataCadastro.TabIndex = 26;
+            // 
+            // tabEstoqueBindingSource
+            // 
+            tabEstoqueBindingSource.DataSource = typeof(Models.DataLayer.TabEstoque);
             // 
             // txtUsuario
             // 
@@ -820,16 +824,6 @@
             label5.TabIndex = 4;
             label5.Text = "Sub Grupo:";
             // 
-            // cbIdReferência
-            // 
-            cbIdReferência.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Referência", true));
-            cbIdReferência.FormattingEnabled = true;
-            cbIdReferência.Location = new Point(103, 54);
-            cbIdReferência.Name = "cbIdReferência";
-            cbIdReferência.Size = new Size(68, 23);
-            cbIdReferência.TabIndex = 3;
-            cbIdReferência.SelectedValueChanged += cbIdReferência_SelectedValueChanged;
-            // 
             // cbGrupo
             // 
             cbGrupo.FormattingEnabled = true;
@@ -873,6 +867,15 @@
             groupBox1.Size = new Size(1018, 74);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
+            // 
+            // cbIdSubGrupo
+            // 
+            cbIdSubGrupo.DataBindings.Add(new Binding("Text", tabEstoqueBindingSource, "Referência", true));
+            cbIdSubGrupo.FormattingEnabled = true;
+            cbIdSubGrupo.Location = new Point(103, 54);
+            cbIdSubGrupo.Name = "cbIdSubGrupo";
+            cbIdSubGrupo.Size = new Size(68, 23);
+            cbIdSubGrupo.TabIndex = 28;
             // 
             // txtDescrição
             // 
@@ -987,10 +990,6 @@
             referênciaDataGridViewTextBoxColumn.Name = "referênciaDataGridViewTextBoxColumn";
             referênciaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tabEstoqueReferênciumBindingSource
-            // 
-            tabEstoqueReferênciumBindingSource.DataSource = typeof(Models.DataLayer.TabEstoqueReferêncium);
-            // 
             // tabEstoqueGrupoBindingSource
             // 
             tabEstoqueGrupoBindingSource.DataSource = typeof(Models.DataLayer.TabEstoqueGrupo);
@@ -1035,6 +1034,7 @@
             tabPage2.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tabEstoqueReferênciumBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)tabEstoqueBindingSource).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
@@ -1043,7 +1043,6 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)lista).EndInit();
-            ((System.ComponentModel.ISupportInitialize)tabEstoqueReferênciumBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)tabEstoqueGrupoBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
@@ -1092,7 +1091,6 @@
         private TextBox txtModelo;
         private Label label6;
         private Label label5;
-        private ComboBox cbIdReferência;
         private ComboBox cbGrupo;
         private Label label4;
         private ComboBox cbIdGrupo;
@@ -1136,5 +1134,6 @@
         internal BindingSource tabEstoqueReferênciumBindingSource;
         internal BindingSource tabEstoqueGrupoBindingSource;
         private ComboBox cbReferência;
+        private ComboBox cbIdSubGrupo;
     }
 }

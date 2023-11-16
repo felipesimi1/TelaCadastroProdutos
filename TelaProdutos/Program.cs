@@ -11,7 +11,7 @@ namespace TelaProdutos
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormCadastroProduto());
+            Application.Run(new FormCadastroUsuario());
         }
     }
 }

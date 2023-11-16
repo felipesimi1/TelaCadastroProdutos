@@ -78,8 +78,8 @@ namespace TelaProdutos.Telas
                 if (formLogin.LoginSucesso)
                 {
 
-                   this.Opacity = 1;
-                   this.ShowInTaskbar = true;
+                    this.Opacity = 1;
+                    this.ShowInTaskbar = true;
 
                 }
                 else
@@ -97,7 +97,16 @@ namespace TelaProdutos.Telas
             }
         }
 
-
-
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenForm(new FormCadastroUsuario());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(string.Format("{0}\n{1}", string.Format("Ocorreu um erro no método '{0}'", MethodBase.GetCurrentMethod().Name), "Favor, entre em contato com o Suporte Técnico!"), Assembly.GetEntryAssembly()?.GetName().Name, MessageBoxButtons.OK);
+            }
+        }
     }
 }

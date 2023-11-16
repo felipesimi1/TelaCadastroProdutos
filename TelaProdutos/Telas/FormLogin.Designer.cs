@@ -39,7 +39,7 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.BackColor = Color.Gainsboro;
+            txtUsuario.BackColor = Color.White;
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtUsuario.Location = new Point(89, 50);
             txtUsuario.Name = "txtUsuario";
@@ -51,7 +51,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.BackColor = Color.Gainsboro;
+            txtSenha.BackColor = Color.White;
             txtSenha.BorderStyle = BorderStyle.FixedSingle;
             txtSenha.Location = new Point(89, 94);
             txtSenha.Name = "txtSenha";
@@ -64,6 +64,8 @@
             // 
             // btnEntrar
             // 
+            btnEntrar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnEntrar.FlatStyle = FlatStyle.Popup;
             btnEntrar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnEntrar.ImageAlign = ContentAlignment.MiddleLeft;
             btnEntrar.ImageIndex = 0;
@@ -88,6 +90,8 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = Color.White;
+            btnCancelar.FlatStyle = FlatStyle.Popup;
             btnCancelar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
             btnCancelar.ImageKey = "erro.png";
@@ -99,14 +103,14 @@
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Sem_Título_1;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(363, 217);
             Controls.Add(btnCancelar);

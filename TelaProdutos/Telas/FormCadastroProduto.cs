@@ -130,7 +130,7 @@ namespace TelaProdutos
                     {
                         tabEstoque.Descrição = txtDescrição.Text;
                         tabEstoque.Grupo = cbIdGrupo.Text;
-                        tabEstoque.Referência = cbIdReferência.Text;
+                        tabEstoque.Referência = cbIdSubGrupo.Text;
                         tabEstoque.Modelo = txtModelo.Text;
                         tabEstoque.Localização = txtLocalizacao.Text;
                         tabEstoque.Localização2 = txtLocalizacao2.Text;
@@ -168,7 +168,7 @@ namespace TelaProdutos
                                 IdItem = txtCodProd.Text,
                                 Descrição = txtDescrição.Text,
                                 Grupo = cbIdGrupo.Text,
-                                Referência = cbIdReferência.Text,
+                                Referência = cbIdSubGrupo.Text,
                                 Modelo = txtModelo.Text,
                                 Localização = txtLocalizacao.Text,
                                 Localização2 = txtLocalizacao2.Text,
@@ -196,7 +196,6 @@ namespace TelaProdutos
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -279,7 +278,7 @@ namespace TelaProdutos
         {
             var IdGrupo = cbIdGrupo.Text;
 
-            cbIdReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
+            cbIdSubGrupo.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
             cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
         }
 
@@ -287,7 +286,7 @@ namespace TelaProdutos
         {
             var IdGrupo = cbIdGrupo.Text;
 
-            cbIdReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
+            cbIdSubGrupo.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
             cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
         }
 
@@ -295,8 +294,8 @@ namespace TelaProdutos
         {
             var IdGrupo = cbIdGrupo.Text;
 
-            cbIdReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
-            cbReferência.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
+            cbIdSubGrupo.DataSource = _subgrupos.Where(a => a.IdGrupo == IdGrupo).ToList();
+            cbReferência.DataSource = _subgrupos.Where(x => x.IdGrupo == IdGrupo).ToList();
         }
 
         private void carregaCategoria()
@@ -316,11 +315,11 @@ namespace TelaProdutos
                     cbGrupo.DisplayMember = "Grupo";
                     cbGrupo.ValueMember = "Grupo";
 
-                    cbIdReferência.DataSource = _subgrupos;
+                    cbIdSubGrupo.DataSource = _subgrupos;
                     cbReferência.DataSource = _subgrupos;
 
-                    cbIdReferência.DisplayMember = "IdReferência";
-                    cbIdReferência.ValueMember = "IdReferência";
+                    cbIdSubGrupo.DisplayMember = "IdReferência";
+                    cbIdSubGrupo.ValueMember = "IdReferência";
                     cbReferência.DisplayMember = "Referência";
                     cbReferência.ValueMember = "Referência";
                 }
@@ -379,7 +378,7 @@ namespace TelaProdutos
                 {
                     if (item is TabEstoqueReferêncium Idreferencia && Idreferencia.Referência == Referência)
                     {
-                        cbIdReferência.SelectedItem = item;
+                        cbIdSubGrupo.SelectedItem = item;
                         break;
                     }
                 }
@@ -388,11 +387,11 @@ namespace TelaProdutos
 
         private void cbIdReferência_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cbIdReferência.SelectedItem != null)
+            if (cbIdSubGrupo.SelectedItem != null)
             {
-                string IdReferência = cbIdReferência.SelectedValue.ToString();
+                string IdReferência = cbIdSubGrupo.SelectedValue.ToString();
 
-                foreach (var item in cbIdReferência.Items)
+                foreach (var item in cbIdSubGrupo.Items)
                 {
                     if (item is TabEstoqueReferêncium referencia && referencia.IdReferência == IdReferência)
                     {
